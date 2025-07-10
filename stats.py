@@ -1,5 +1,5 @@
-def get_book_text():
-    with open("books/frankenstein.txt") as f:
+def get_book_text(path):
+    with open(path) as f:
         # Read the entire content of the file
         return f.read()
 
