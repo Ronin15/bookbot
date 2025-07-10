@@ -1,11 +1,12 @@
-def get_book_text():
-    with open("books/frankenstein.txt") as f:
-        # Read the entire content of the file
-        return f.read()
+
+from stats import get_book_text, count_characters
 
 def main():
     text = get_book_text()
-    print(text)
+    num_words = len(text.split())
+    print(f"{num_words} words found in the document.")
+    char_counts = count_characters(text)
+    print(char_counts)
 
 if __name__ == "__main__":
     main()
